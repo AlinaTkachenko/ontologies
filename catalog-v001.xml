@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <uri id="Imports Wizard Entry" name="http://purl.obolibrary.org/obo/doid/releases/2026-09-30/doid.owl" uri="doid.owl"/>
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public">
+        <uri id="Automatically generated entry, Timestamp=1793058604416" name="http://purl.obolibrary.org/obo/doid.owl" uri="doid.owl"/>
+    </group>
+</catalog>

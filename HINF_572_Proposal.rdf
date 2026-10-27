@@ -1,0 +1,433 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/alinatkachenko/ontologies/2026/9/untitled-ontology-5/"
+     xml:base="http://www.semanticweb.org/alinatkachenko/ontologies/2026/9/untitled-ontology-5/"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:obo="http://purl.obolibrary.org/obo/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:doid="http://purl.obolibrary.org/obo/doid#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:oboInOwl="http://www.geneontology.org/formats/oboInOwl#">
+    <owl:Ontology rdf:about="http://uvic.ca/hinf572/clinicue-triage">
+        <owl:versionIRI rdf:resource="http://uvic.ca/hinf572/clinicue-triage"/>
+        <owl:imports rdf:resource="http://purl.obolibrary.org/obo/doid/releases/2026-09-30/doid.owl"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#hasAdherence -->
+
+    <owl:ObjectProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#hasAdherence">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#AdherenceStatus"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#hasClinicalOutcome -->
+
+    <owl:ObjectProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#hasClinicalOutcome">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#AdherenceStatus"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#iao_evaluates -->
+
+    <owl:ObjectProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#iao_evaluates">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#InquiryItem"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#ClinicalPhenotype"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#prescribesMedication -->
+
+    <owl:ObjectProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#prescribesMedication">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#Medication"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#presentsPhenotype -->
+
+    <owl:ObjectProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#presentsPhenotype">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#Patient"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#ClinicalPhenotype"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#recommendsInquiry -->
+
+    <owl:ObjectProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#recommendsInquiry">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#Patient"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#InquiryItem"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment -->
+
+    <owl:ObjectProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment">
+        <rdfs:domain>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#Patient"/>
+            </owl:Restriction>
+        </rdfs:domain>
+        <rdfs:range>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode"/>
+            </owl:Restriction>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#hasDurationWeeks -->
+
+    <owl:DatatypeProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#hasDurationWeeks">
+        <rdfs:domain rdf:resource="http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#hasSensitivityTier -->
+
+    <owl:DatatypeProperty rdf:about="http://uvic.ca/hinf572/clinicue-triage#hasSensitivityTier">
+        <rdfs:domain rdf:resource="http://uvic.ca/hinf572/clinicue-triage#InquiryItem"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+        <rdfs:comment>EarlyTreatmentFailureContext ≡ 
+Patient 
+  ⊓ ∃ undergoesTreatment.(TreatmentEpisode
+  ⊓ ∃ prescribesMedication.SSRI 
+  ⊓ ∃ hasClinicalOutcome.InadequateResponse 
+  ⊓ ∃ hasAdherence.ConfirmedAdherent 
+  ⊓ ∃ hasDurationWeeks.(≥ 4))</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.obolibrary.org/obo/DOID_1596 -->
+
+    <owl:Class rdf:about="http://purl.obolibrary.org/obo/DOID_1596">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#Condition"/>
+        <rdfs:label>major depressive disorder</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#AdherenceStatus -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#AdherenceStatus"/>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#ClinicalOutcome -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#ClinicalOutcome"/>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#ClinicalPhenotype -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#ClinicalPhenotype"/>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#Condition -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#Condition"/>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#ConfirmedAdherent -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#ConfirmedAdherent">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#AdherenceStatus"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#EarlyTreatmentFailureContext -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#EarlyTreatmentFailureContext">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://uvic.ca/hinf572/clinicue-triage#Patient"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#undergoesTreatment"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:intersectionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode"/>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#hasAdherence"/>
+                                        <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#ConfirmedAdherent"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#hasClinicalOutcome"/>
+                                        <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#InadequateResponse"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#prescribesMedication"/>
+                                        <owl:someValuesFrom rdf:resource="http://uvic.ca/hinf572/clinicue-triage#SSRI"/>
+                                    </owl:Restriction>
+                                    <owl:Restriction>
+                                        <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#hasDurationWeeks"/>
+                                        <owl:someValuesFrom>
+                                            <rdfs:Datatype>
+                                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                                <owl:withRestrictions rdf:parseType="Collection">
+                                                    <rdf:Description>
+                                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:minInclusive>
+                                                    </rdf:Description>
+                                                </owl:withRestrictions>
+                                            </rdfs:Datatype>
+                                        </owl:someValuesFrom>
+                                    </owl:Restriction>
+                                </owl:intersectionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#Patient"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#HP_0002360_ReducedSleepNeed -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#HP_0002360_ReducedSleepNeed">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#ClinicalPhenotype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#HP_NocturnalHyperarousal -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#HP_NocturnalHyperarousal">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#ClinicalPhenotype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#InadequateResponse -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#InadequateResponse">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#ClinicalOutcome"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#InquiryItem -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#InquiryItem">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://uvic.ca/hinf572/clinicue-triage#InquiryItem"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://uvic.ca/hinf572/clinicue-triage#hasSensitivityTier"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">2</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:comment>SafeTraumaInformedInquiryItem ≡ InquiryItem ⊓ ∃hasSensitivityTier.(≤ 2)</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#Medication -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#Medication"/>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#OAE_0000419_Akathisia -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#OAE_0000419_Akathisia">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#ClinicalPhenotype"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#Patient -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#Patient"/>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#RxNorm_Citalopram -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#RxNorm_Citalopram">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#SSRI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#RxNorm_Escitalopram -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#RxNorm_Escitalopram">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#SSRI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#RxNorm_Fluoxetine -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#RxNorm_Fluoxetine">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#SSRI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#RxNorm_Sertraline -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#RxNorm_Sertraline">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#SSRI"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#SSRI -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#SSRI">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#Medication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#SafeTraumaInformedInquiryItem -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#SafeTraumaInformedInquiryItem">
+        <rdfs:subClassOf rdf:resource="http://uvic.ca/hinf572/clinicue-triage#InquiryItem"/>
+    </owl:Class>
+    
+
+
+    <!-- http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode -->
+
+    <owl:Class rdf:about="http://uvic.ca/hinf572/clinicue-triage#TreatmentEpisode"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
